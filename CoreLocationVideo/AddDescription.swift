@@ -9,9 +9,10 @@
 import Foundation
 import UIKit
 
-class AddDescription: UIViewController {
+class AddDescription: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
 //    @IBOutlet weak var Scroller: UIScrollView!
+    @IBOutlet weak var Scroller: UIScrollView!
     
     @IBOutlet weak var hazardType: UILabel!
     @IBOutlet weak var describeIssue: UITextField!
@@ -21,11 +22,14 @@ class AddDescription: UIViewController {
     @IBOutlet weak var decGenLocTextView: UITextView!
 
     @IBOutlet weak var issueDetailedDescription: UILabel!
+//    @IBOutlet weak var issueDetailedDescription: UILabel!
 //    @IBOutlet weak var pickerView: UIPickerView!
+//    @IBOutlet weak var pickerView: UIPickerView!
+      @IBOutlet weak var pickerView: UIPickerView!
     
-//    var pickerDataSource = ["Please choose Issue Type...","Road Hazard", "Right-of-Way Maintenance", "Public Facility Maintenance", "Code Enforcement Violation", "Utility Service/Repair", "Website", "Other"];
+    var pickerDataSource = ["Please choose Issue Type...","Road Hazard", "Right-of-Way Maintenance", "Public Facility Maintenance", "Code Enforcement Violation", "Utility Service/Repair", "Website", "Other"];
     
-//    var selectedRow = 0
+    var selectedRow = 0
     
 ////////////////////////////////
 //
@@ -38,14 +42,14 @@ class AddDescription: UIViewController {
         print("AddDescriptionVC didload")
         // Do any additional setup after loading the view, typically from a nib.
         
- //       Scroller.contentInset = UIEdgeInsetsMake(0, 0, 800, 0)
+        Scroller.contentInset = UIEdgeInsetsMake(0, 0, 800, 0)
         
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
         
-  //      self.pickerView.dataSource = self;
-  //      self.pickerView.delegate = self;
+        self.pickerView.dataSource = self;
+        self.pickerView.delegate = self;
         
     }
     
@@ -53,7 +57,7 @@ class AddDescription: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-/*
+
     ////////////////////////////////
     //
     //  Picker Stuff
@@ -129,7 +133,7 @@ class AddDescription: UIViewController {
         NSUserDefaults.standardUserDefaults().setObject(selectedRow, forKey: "myRowValueKey")
 
     }
-*/
+
     
     ////////////////////////////////
     //
