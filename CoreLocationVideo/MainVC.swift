@@ -65,7 +65,8 @@ class MainVC: UIViewController, UIPopoverPresentationControllerDelegate {
         if segue.identifier == "showReport"
         {
             var vc = segue.destinationViewController as! UIViewController
-            vc.preferredContentSize = CGSize(width: view.frame.width, height: view.frame.height - 250)
+            vc.preferredContentSize = CGSize(width: view.frame.width, height: 500)
+      //      vc.preferredContentSize = CGSize(width: view.frame.width, height: view.frame.height - 250)
             
             var controller = vc.popoverPresentationController
             

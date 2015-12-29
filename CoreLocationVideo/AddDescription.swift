@@ -146,7 +146,7 @@ class AddDescription: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
-/*
+
     ////////////////////////////////
     //
     //  Scroller Set up
@@ -161,7 +161,7 @@ class AddDescription: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         self.Scroller.contentSize.width = 0
         
     }
-*/
+
     
 ////////////////////////////////
 //

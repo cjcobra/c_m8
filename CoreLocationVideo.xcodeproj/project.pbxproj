@@ -17,6 +17,10 @@
 		9CD5B6B91B35806B00795922 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD5B6B81B35806B00795922 /* CoreLocation.framework */; };
 		9CD5B6BB1B35807500795922 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD5B6BA1B35807500795922 /* MapKit.framework */; };
 		A91956A51C1F4E6B000AE44A /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91956A41C1F4E6B000AE44A /* MainVC.swift */; };
+		A91E5C181C33238E00C1C494 /* ReportsPopOverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91E5C171C33238E00C1C494 /* ReportsPopOverVC.swift */; };
+		A91E5C1A1C33241E00C1C494 /* TrackPopOverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91E5C191C33241E00C1C494 /* TrackPopOverVC.swift */; };
+		A91E5C1C1C33243000C1C494 /* SettingsPopOverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91E5C1B1C33243000C1C494 /* SettingsPopOverVC.swift */; };
+		A91E5C1E1C33243F00C1C494 /* AlertsPopOverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91E5C1D1C33243F00C1C494 /* AlertsPopOverVC.swift */; };
 		A9448EA41C2453B90052D1DE /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9448EA31C2453B90052D1DE /* AssetsLibrary.framework */; };
 		A9ABED9D1C20976E0057DA17 /* AddDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ABED9C1C20976E0057DA17 /* AddDescription.swift */; };
 		A9FC3B2D1C21C1260039AC28 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FC3B2C1C21C1260039AC28 /* CameraVC.swift */; };
@@ -48,6 +52,10 @@
 		9CD5B6B81B35806B00795922 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		9CD5B6BA1B35807500795922 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A91956A41C1F4E6B000AE44A /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		A91E5C171C33238E00C1C494 /* ReportsPopOverVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportsPopOverVC.swift; path = ../ReportsPopOverVC.swift; sourceTree = "<group>"; };
+		A91E5C191C33241E00C1C494 /* TrackPopOverVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrackPopOverVC.swift; path = ../TrackPopOverVC.swift; sourceTree = "<group>"; };
+		A91E5C1B1C33243000C1C494 /* SettingsPopOverVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsPopOverVC.swift; path = ../SettingsPopOverVC.swift; sourceTree = "<group>"; };
+		A91E5C1D1C33243F00C1C494 /* AlertsPopOverVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertsPopOverVC.swift; path = ../AlertsPopOverVC.swift; sourceTree = "<group>"; };
 		A9448EA31C2453B90052D1DE /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		A9ABED9C1C20976E0057DA17 /* AddDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDescription.swift; sourceTree = "<group>"; };
 		A9FC3B2C1C21C1260039AC28 /* CameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
@@ -101,6 +109,10 @@
 			children = (
 				9CD5B6951B35805700795922 /* AppDelegate.swift */,
 				A91956A41C1F4E6B000AE44A /* MainVC.swift */,
+				A91E5C171C33238E00C1C494 /* ReportsPopOverVC.swift */,
+				A91E5C191C33241E00C1C494 /* TrackPopOverVC.swift */,
+				A91E5C1B1C33243000C1C494 /* SettingsPopOverVC.swift */,
+				A91E5C1D1C33243F00C1C494 /* AlertsPopOverVC.swift */,
 				A9ABED9C1C20976E0057DA17 /* AddDescription.swift */,
 				9CD5B69A1B35805700795922 /* ViewController.swift */,
 				A9FC3B2C1C21C1260039AC28 /* CameraVC.swift */,
@@ -247,11 +259,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A91E5C1E1C33243F00C1C494 /* AlertsPopOverVC.swift in Sources */,
 				A9ABED9D1C20976E0057DA17 /* AddDescription.swift in Sources */,
 				A9FC3B2F1C21E3810039AC28 /* EmailVC.swift in Sources */,
 				A9FC3B2D1C21C1260039AC28 /* CameraVC.swift in Sources */,
+				A91E5C1C1C33243000C1C494 /* SettingsPopOverVC.swift in Sources */,
 				A91956A51C1F4E6B000AE44A /* MainVC.swift in Sources */,
+				A91E5C181C33238E00C1C494 /* ReportsPopOverVC.swift in Sources */,
 				9CD5B69B1B35805700795922 /* ViewController.swift in Sources */,
+				A91E5C1A1C33241E00C1C494 /* TrackPopOverVC.swift in Sources */,
 				9CD5B6961B35805700795922 /* AppDelegate.swift in Sources */,
 				9CD5B6991B35805700795922 /* CoreLocationVideo.xcdatamodeld in Sources */,
 			);
