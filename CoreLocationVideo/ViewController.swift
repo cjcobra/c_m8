@@ -23,6 +23,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     var timer = NSTimer()
     
+    @IBOutlet weak var previousStepBtn: UIButton!
     // creae a variable destination for directions
     
     var destination:MKMapItem = MKMapItem()
@@ -214,12 +215,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 onComplete(image: nil)
         })
     }
-    
-    
-    
-    
-    
-    
+ 
     
     ////////////////////////////////
     //
@@ -229,9 +225,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     
     @IBAction func updateMyLocation(sender: UIButton) {
-        print("Refresh location and Screenshot")
+        print("Refresh location")
         
-        self.takeScreenShot()
+  //      self.takeScreenShot()
         
         locationManager.startUpdatingLocation()
         

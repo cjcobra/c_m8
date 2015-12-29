@@ -70,6 +70,55 @@ class CameraVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         
     }
     
+    // test other buttons
+    
+    @IBAction func cameraRollBtn(sender: UIButton) {
+        print("useCameraRoll")
+        if UIImagePickerController.isSourceTypeAvailable(
+            UIImagePickerControllerSourceType.SavedPhotosAlbum) {
+                let imagePicker = UIImagePickerController()
+                
+                imagePicker.delegate = self
+                imagePicker.sourceType =
+                    UIImagePickerControllerSourceType.PhotoLibrary
+                imagePicker.mediaTypes = [kUTTypeImage as NSString as String]
+                imagePicker.allowsEditing = false
+                self.presentViewController(imagePicker, animated: true,
+                    completion: nil)
+                newMedia = false
+        }
+    }
+    
+    @IBAction func cameraBtn(sender: UIButton) {
+        
+        print("useCamera")
+        if UIImagePickerController.isSourceTypeAvailable(
+            UIImagePickerControllerSourceType.Camera) {
+                
+                let imagePicker = UIImagePickerController()
+                
+                imagePicker.delegate = self
+                imagePicker.sourceType =
+                    UIImagePickerControllerSourceType.Camera
+                imagePicker.mediaTypes = [kUTTypeImage as NSString as String]
+                imagePicker.allowsEditing = false
+                
+                self.presentViewController(imagePicker, animated: true,
+                    completion: nil)
+                newMedia = true
+                
+                // Add email stuff
+                
+                //   let tempImage = editingInfo[UIImagePickerControllerOriginalImage] as UIImage
+                
+                
+                
+        }
+    }
+    
+    // end test buttons
+    
+/*
     @IBAction func useCameraRoll(sender: AnyObject) {
         
         print("useCameraRoll")
@@ -88,7 +137,7 @@ class CameraVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         }
         
     }
-    
+*/
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
         let mediaType = info[UIImagePickerControllerMediaType] as! String
