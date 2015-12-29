@@ -11,7 +11,15 @@ import UIKit
 
 class MainVC: UIViewController {
     
+    @IBOutlet weak var homeBtn: UIButton!
     
+    @IBOutlet weak var reportBtn: UIButton!
+    
+    @IBOutlet weak var trackBtn: UIButton!
+    
+    @IBOutlet weak var settingsBtn: UIButton!
+    
+    @IBOutlet weak var alertsBtn: UIButton!
     
 ////////////////////////////////
 //
@@ -28,4 +36,45 @@ class MainVC: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }}
+    }
+
+    ////////////////////////////////
+    //
+    //  Button Actions
+    //
+    ////////////////////////////////
+    
+    @IBAction func pressedHomeBtn(sender: UIButton) {
+        print("pushedHomeBtn")
+        
+        
+    }
+    
+    @IBAction func pressedReportBtn(sender: UIButton) {
+        print("pushedReportBtn")
+        
+        
+    }
+    
+    @IBAction func pressedTrackBtn(sender: UIButton) {
+        print("pushedTrackBtn")
+        
+        
+    }
+    
+
+    @IBAction func pressedSettingsBtn(sender: UIButton) {
+        print("pushedSettingsBtn")
+        
+        
+    }
+    
+    @IBAction func pressedAlertsBtn(sender: UIButton) {
+        print("pushedAlertsBtn")
+        
+        
+    }
+    
+
+
+}  // end all
