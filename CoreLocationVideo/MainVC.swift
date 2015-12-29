@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class MainVC: UIViewController {
+class MainVC: UIViewController, UIPopoverPresentationControllerDelegate {
     
     @IBOutlet weak var homeBtn: UIButton!
     
@@ -50,11 +50,39 @@ class MainVC: UIViewController {
         
     }
     
+    // Report
+    
     @IBAction func pressedReportBtn(sender: UIButton) {
         print("pushedReportBtn")
         
-        
+        self.performSegueWithIdentifier("showReport", sender: self)
+
     }
+    
+    // could be for all buttons
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == "showReport"
+        {
+            var vc = segue.destinationViewController as! UIViewController
+            vc.preferredContentSize = CGSize(width: view.frame.width, height: view.frame.height - 250)
+            
+            var controller = vc.popoverPresentationController
+            
+            if controller != nil
+            {
+                controller?.delegate = self
+            }
+        }
+    }
+    
+    // at the end.
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle
+    {
+        return .None
+    }
+    
+    // end Report
     
     @IBAction func pressedTrackBtn(sender: UIButton) {
         print("pushedTrackBtn")

@@ -7,6 +7,80 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="MSD-hZ-1Qj">
+            <objects>
+                <viewController id="ttX-lP-I2n" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jao-ay-x1B"/>
+                        <viewControllerLayoutGuide type="bottom" id="YcY-UL-YcH"/>
+                    </layoutGuides>
+                    <view key="view" alpha="0.0" contentMode="scaleToFill" id="hNZ-AK-sOV">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu-popup--report" translatesAutoresizingMaskIntoConstraints="NO" id="cxJ-4U-MMl">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="2hn-JK-RFO"/>
+                                    <constraint firstAttribute="height" constant="300" id="YNp-Fc-oJi"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2hn-JK-RFO"/>
+                                        <exclude reference="YNp-Fc-oJi"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="2hn-JK-RFO"/>
+                                        <include reference="YNp-Fc-oJi"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cxJ-4U-MMl" firstAttribute="leading" secondItem="hNZ-AK-sOV" secondAttribute="leading" id="8RV-rh-6xg"/>
+                            <constraint firstAttribute="bottom" secondItem="cxJ-4U-MMl" secondAttribute="bottom" id="8hL-10-N4R"/>
+                            <constraint firstItem="cxJ-4U-MMl" firstAttribute="centerX" secondItem="hNZ-AK-sOV" secondAttribute="centerX" id="X8w-aK-YCX"/>
+                            <constraint firstAttribute="trailing" secondItem="cxJ-4U-MMl" secondAttribute="trailing" id="dMd-U7-Kgd"/>
+                            <constraint firstItem="cxJ-4U-MMl" firstAttribute="top" secondItem="hNZ-AK-sOV" secondAttribute="top" id="o1i-uq-hHH"/>
+                            <constraint firstItem="cxJ-4U-MMl" firstAttribute="centerY" secondItem="hNZ-AK-sOV" secondAttribute="centerY" id="pi5-5C-b3l"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="cxJ-4U-MMl"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="8RV-rh-6xg"/>
+                                <exclude reference="8hL-10-N4R"/>
+                                <exclude reference="X8w-aK-YCX"/>
+                                <exclude reference="dMd-U7-Kgd"/>
+                                <exclude reference="o1i-uq-hHH"/>
+                                <exclude reference="pi5-5C-b3l"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="cxJ-4U-MMl"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="8RV-rh-6xg"/>
+                                <include reference="8hL-10-N4R"/>
+                                <include reference="X8w-aK-YCX"/>
+                                <include reference="dMd-U7-Kgd"/>
+                                <include reference="o1i-uq-hHH"/>
+                                <include reference="pi5-5C-b3l"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="300" height="300"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nmU-4q-WTH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1239" y="559.5"/>
+        </scene>
         <!--MainVC-->
         <scene sceneID="uLo-ME-Y7W">
             <objects>
@@ -177,7 +251,6 @@
                                 </variation>
                                 <connections>
                                     <action selector="pressedReportBtn:" destination="Aaw-9M-MtJ" eventType="touchUpInside" id="Eti-jd-p1d"/>
-                                    <segue destination="hzz-1Z-5Os" kind="presentation" id="SAO-on-6yT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -283,6 +356,9 @@
                         <outlet property="reportBtn" destination="Kxk-gk-x03" id="Ymp-uA-0lC"/>
                         <outlet property="settingsBtn" destination="9ld-Wm-e5g" id="yBY-T7-aRd"/>
                         <outlet property="trackBtn" destination="1m4-ml-iHH" id="caM-2w-0lh"/>
+                        <segue destination="ttX-lP-I2n" kind="popoverPresentation" identifier="showReport" popoverAnchorView="Kxk-gk-x03" id="Ry4-Df-HmI">
+                            <popoverArrowDirection key="popoverArrowDirection" down="YES"/>
+                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nFY-nn-ka0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1541,7 +1617,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DFs-eh-zDZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="63" y="189"/>
+            <point key="canvasLocation" x="189" y="237.75"/>
         </scene>
     </scenes>
     <resources>
@@ -1549,12 +1625,12 @@
         <image name="background" width="250" height="444"/>
         <image name="homeMenu" width="100" height="100"/>
         <image name="logo-main" width="153" height="153"/>
+        <image name="menu-popup--report" width="250" height="306"/>
         <image name="reportMenu" width="100" height="100"/>
         <image name="settingsMenu" width="100" height="100"/>
         <image name="trackMenu" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="UnM-px-so1"/>
-        <segue reference="SAO-on-6yT"/>
     </inferredMetricsTieBreakers>
 </document>
